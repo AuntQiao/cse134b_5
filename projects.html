@@ -10,6 +10,7 @@
 </head>
 
 <body class="page">
+  
   <header>
     <h1>Projects</h1>
     <nav>
@@ -18,12 +19,16 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="aboutMe.html">About Me</a></li>
         <li><a href="resume.html">Resume</a></li>
-        <li><a href="experiments.html">Experiments</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
+    <button id="theme-toggle">Theme toggle</button>
+    <noscript>
+      <p style="color:red;">Theme toggle requires JavaScript.</p>
+    </noscript>
+
     <article>
       <h2>Project 1 – Vision-Based Extraction</h2>
       <picture>
@@ -76,5 +81,6 @@
   </footer>
 
   <script>document.createElement("project-card");</script>
+  <script src="theme.js" defer></script>
 </body>
 </html>

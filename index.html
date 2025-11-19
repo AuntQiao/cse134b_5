@@ -7,9 +7,11 @@
   <link rel="icon" href="favicon.ico">
   <link rel="stylesheet" href="styles.css">
   
+  
 </head>
 
 <body class="page">
+  
   <header>
     <h1>Welcome to Nicole Liu’s Portfolio</h1>
     <nav>
@@ -18,7 +20,10 @@
         <li><a href="aboutMe.html">About Me</a></li>
         <li><a href="projects.html">Projects</a></li>
         <li><a href="resume.html">Resume</a></li>
-        <li><a href="experiments.html">Experiments</a></li>
+      </ul>
+       <ul>
+        <li><a href="form-no-js.html">Form No JS</a></li>
+        <li><a href="form-with-js.html">Form With JS</a></li>
       </ul>
     </nav>
   </header>
@@ -28,6 +33,12 @@
   </noscript>
 
   <main>
+
+    <button id="theme-toggle">Toggle Theme</button>
+    <noscript>
+      <p style="color:red;">Theme toggle requires JavaScript.</p>
+    </noscript>
+
     <section id="me">
       <h2>About me</h2>
       <me-card>
@@ -80,5 +91,6 @@
     document.createElement("me-card");
     document.createElement("project-card");
   </script>
+  <script src="theme.js" defer></script>
 </body>
 </html>

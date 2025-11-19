@@ -12,6 +12,7 @@
 </head>
 
 <body class="page">
+  
   <header>
     <h1>About Me!</h1>
     <nav>
@@ -20,12 +21,17 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="resume.html">Resume</a></li>
         <li><a href="projects.html">Projects</a></li>
-        <li><a href="experiments.html">Experiments</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
+
+    <button id="theme-toggle">Toggle Theme</button>
+    <noscript>
+      <p style="color:red;">Theme toggle requires JavaScript.</p>
+    </noscript>
+
     <section>
       <h2>Education</h2>
       <p><strong>UC San Diego</strong> <i> Computer Science & Engineering Major</i></p>
@@ -40,17 +46,6 @@
       </ul>
     </section>
 
-    <section>
-      <h3>Fun</h3>
-      <article>
-        <p>I enjoy building interactive web games and learning new frameworks.</p>
-        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="50" cy="50" r="40" stroke="blue" stroke-width="4" fill="lightblue" />
-          <text x="50%" y="50%" text-anchor="middle" stroke="#000" stroke-width="1px" dy=".3em">Game</text> 
-        </svg>
-      </article>
-    </section>
-
     
   </main>
 
@@ -59,5 +54,6 @@
   </footer>
 
   <script>document.createElement("me-card");</script>
+  <script src="theme.js" defer></script>
 </body>
 </html>

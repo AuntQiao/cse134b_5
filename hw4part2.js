@@ -56,19 +56,14 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     emailField.addEventListener("input", () => {
-        const pattern = new RegExp(emailField.getAttribute("pattern"));
         const v = emailField.value;
+        const cleaned = v.replace(/[^A-Za-z0-9@._+-]/g, "");
 
-        if (!pattern.test(v)) {
-            const cleaned = v.replace(/[^A-Za-z0-9@._+-]/g, "");
-            // use cleanded here is to adviod showing flash when it is not match the pattern
-
-            if (cleaned !== v) {
-                flashIllegal(emailField, "Email can only contain letters, numbers, and punctuation like . _ + -");
-                setTimeout(() => {
-                    emailField.value = cleaned;
-                }, 50);
-            }
+        if (cleaned !== v) {
+            flashIllegal(emailField, "Email can only contain letters, numbers, and punctuation like . _ + -");
+            setTimeout(() => {
+                emailField.value = cleaned;
+            }, 50);
         }
     });
 

@@ -6,6 +6,42 @@
     <title>Contact Form</title>
 
     <style>
+    :root {
+        --bg-color: #ffffff;
+        --text-color: #222;
+        --input-bg: #ffffff;
+        --input-border: #ccc;
+
+        --button-bg: #6d768d;
+        --button-hover-bg: #abbe8e;
+
+        --error-color: #cd7369;
+        --info-color: #2980b9;
+
+        --invalid-border: #e0aba5;
+        --invalid-bg: #f5e9e8;
+
+        --flash-bg: white;
+     }
+
+    .dark {
+        --bg-color: #111;
+        --text-color: #eee;
+        --input-bg: #f4f4f9;
+        --input-border: #555;
+
+        --button-bg: #a2a9c6;
+        --button-hover-bg: #6f8b5e;
+
+        --error-color: #ccd2eb;
+        --info-color: #76b9ff;
+
+        --invalid-border: #ceddef;
+        --invalid-bg: #bfd2e6;
+
+        --flash-bg: #222;
+    }
+
     body {
       font-family: Arial, sans-serif;
       margin: 1rem 1rem 1rem 1rem;
@@ -14,6 +50,8 @@
       height: 100%;
       display: flex;
       flex-direction: column;
+      background: var(--bg-color);
+      color: var(--text-color);
     }
 
     h1{
@@ -30,9 +68,10 @@
       width: 100%;
       margin-top: 0.5rem;
       padding: 0.7rem;
-      border: 1px solid #ccc;
+      border: 1px solid var(--input-border);
       border-radius: 5px;
       font-size: 1rem;
+      background: var(--input-bg);
     }
 
     textarea {
@@ -41,14 +80,14 @@
     }
 
     output.error {
-      color: #cd7369;
+      color: var(--error-color);
       font-size: 0.9rem;
       min-height: 1em;
       display: block;
     }
 
     output.info {
-      color: #2980b9;
+      color: var(--info-color);
       font-size: 0.9rem;
       min-height: 1em;
       display: block;
@@ -58,7 +97,7 @@
       margin-top: 1.5rem;
       width: 100%;
       padding: 0.9rem;
-      background: #6d768d;
+      background: var(--button-bg);
       border: none;
       color: white;
       font-size: 1rem;
@@ -81,8 +120,8 @@
 
     input:invalid,
     textarea:invalid {
-        border: 2px solid #e0aba5;
-        background-color: #f5e9e8;
+        border: 2px solid var(--invalid-border);
+        background-color: var(--invalid-bg);
     }
 
     input:focus,
@@ -102,12 +141,21 @@
     to { background-color: white; }
     }
 
+    .theme-toggle-button {
+    width: 10%; 
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1.5rem; 
+    background-color: #89b66b;
+    }
+
+    nav a{
+      color: var(--text-color);
+    }
+
   </style>
 </head>
 <body> 
-    <noscript>
-        <p style="color:red;">Theme toggle requires JavaScript.</p>
-    </noscript>
 
     <h1>Contact Form</h1>
 
@@ -135,7 +183,19 @@
       <button type="submit">Save</button>
     </form>
 
+    <button id="theme-toggle" class="theme-toggle-button">Theme toggle</button>
+    <noscript>
+      <p style="color:red;">Theme toggle requires JavaScript.</p>
+    </noscript>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li> 
+      </ul>
+    </nav>
+
     <script src="hw4part2.js"></script>
+    <script src="theme.js" defer></script>
    
  </body>
 </html>

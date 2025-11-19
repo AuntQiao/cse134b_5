@@ -1,12 +1,51 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap');
 
-:root {
+/* :root {
   --homepage-bg: #f8f9fa;
   --accent: #a295f6;
   --highlight: darkred;
   --scrollbar-color-thumb: rgb(233, 102, 200);
 }
 /* property: var(--variable-name, fallback-value); */
+/* .dark {
+  --bg-color: #111;
+  --text-color: #eee;
+  --accent-color: #9aa0ff;
+} */ 
+
+:root {
+  --bg-color: #ffffff;        
+  --text-color: #111111;     
+  --accent-color: #a295f6;    
+  --homepage-bg: #f8f9fa;
+  --highlight: darkred;
+  --scrollbar-color-thumb: rgb(233, 102, 200);
+   --card-bg: white;
+  --card-border: #ddd;
+  --card-text: #333;
+  --article-bg: color-mix(in srgb, var(--homepage-bg, #f8f9fa) 85%, white);
+}
+
+/* Dark theme */
+.dark {
+  --homepage-bg: #15212e;
+  --bg-color: #111111;
+  --text-color: #eeeeee;
+  --accent-color: #cccee1;
+  --card-bg: #434141;
+  --card-border: #555;
+  --card-text: #ddd;
+  --highlight: rgb(234, 224, 224);
+  --article-bg: color-mix(in srgb, var(--homepage-bg, #5d656d) 55%, rgb(90, 90, 127));
+}
+
+/* Applies variables */
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+  margin: 0;
+  font-family: 'Lora', serif;
+}
 
 html, body {
   max-width: 100%;
@@ -97,7 +136,6 @@ body {
   font-family: 'Lora', sans-serif;
   font-size: 18px;
   margin: 0;
-  background: var(--homepage-bg, #f8f9fa);  
   color: var(--accent, #9a97ac); 
   scrollbar-width: thin; 
   scrollbar-color: var(--scrollbar-color-thumb, darkred) #f8f9fa;
@@ -195,7 +233,7 @@ article {
   padding: 1rem 1.5rem;
   margin: 1.5rem auto;                        
   max-width: 600px;                           
-  background-color: color-mix(in srgb, var(--main-bg, #f8f9fa) 85%, white);
+  background-color: var(--article-bg);
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);   
 }
 
@@ -293,8 +331,8 @@ main section {
   text-align: center;
 
   
-  background: white;
-  border: 1px solid #ddd;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
   border-radius: 12px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
   
@@ -302,17 +340,19 @@ main section {
   max-width: 900px; 
   margin: 2rem auto; 
   padding: 2rem;
+
+  color: var(--card-text);
 }
 
 
 main section h2 {
-  color: var(--accent, #9e92e1);
+  color: var(--accent-color, #9e92e1);
   font-size: 1.8rem;
   margin-bottom: 1rem;
 }
 
 main section p, main section a {
-  color: var(--accent, #9a97ac);
+  color: var(--accent-color, #9a97ac);
   max-width: 600px; 
 }
 
