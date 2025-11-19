@@ -48,7 +48,11 @@ document.addEventListener("DOMContentLoaded", () => {
             setTimeout(() => {
                 nameField.value = cleaned;
                 }, 50);
-        }
+        }else if (v.length > 2 && /^[A-Za-z .'-]+$/.test(v)) {
+        infoOut(nameField).textContent = "Looks good!";
+    } else {
+        infoOut(nameField).textContent = "";
+    }
     });
 
     emailField.addEventListener("input", () => {
@@ -289,6 +293,7 @@ document.addEventListener("DOMContentLoaded", () => {
         
 
         if (isValid) {
+            infoOut(form).textContent = "Form is valid! Submitting...";
             form.submit();
         }
     });
