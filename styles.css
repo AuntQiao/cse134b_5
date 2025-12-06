@@ -385,3 +385,13 @@ main section a:hover {
   }
 }
 
+
+#project-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  width: 90%;
+  max-width: 1200px;
+  margin: 2rem auto;
+}
+

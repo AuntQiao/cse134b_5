@@ -29,43 +29,9 @@
       <p style="color:red;">Theme toggle requires JavaScript.</p>
     </noscript>
 
-    <article>
-      <h2>Project 1 – Vision-Based Extraction</h2>
-      <picture>
-        <source srcset="images/LLM-small.jpg" media="(max-width: 600px)">
-        <source srcset="images/LLM.jpg" media="(min-width: 601px)">
-        <img src="images/LLM.jpg" alt="LLM image">
-      </picture>
-      <p><strong>Machine Learning </strong> project using OpenCV and YOLOv8.</p>
-      <progress value="70" max="100">70%</progress>
-      <p>70% completed</p>
-    </article>
+    <h2>My Projects</h2>
+    <div id="project-list"></div>
     
-
-    <article>
-      <h2>Project 2 – Quantum Circuit Scheduler</h2>
-      <picture>
-        <source srcset="images/quantum-small.png" media="(max-width: 600px)">
-        <source srcset="images/quantum.png" media="(min-width: 601px)">
-        <img src="images/quantum.png" alt="Quantum image">
-      </picture>
-      <p><em>Python / Qiskit</em> based quantum compiler optimization.</p>
-      <progress value="10" max="100">10%</progress>
-      <p>10% completed</p>
-    </article>
-
-    <article>
-      <h2>Project 3 – Interactive Web Game</h2>
-      <picture>
-        <source srcset="images/game-small.png" media="(max-width: 600px)">
-        <source srcset="images/game.png" media="(min-width: 601px)">
-        <img src="images/game.png" alt="Game image">
-      </picture>
-      <p>Small escape game built with Konva and Vite.</p>
-      <progress value="90" max="100">90%</progress>
-      <p>90% completed</p>
-    </article>
-
     <fieldset>
       <legend>Feedback</legend>
       <form>
@@ -80,7 +46,8 @@
     <p>&copy; 2025 Nicole Liu</p>
   </footer>
 
-  <script>document.createElement("project-card");</script>
   <script src="theme.js" defer></script>
+  <script src="projectCard.js" type="module"></script>
+  <script src="renderProjects.js" type="module"></script>
 </body>
 </html>
