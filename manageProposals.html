@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proposal Manager (CRUD)</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="favicon.ico">
+</head>
+
+<body class="page">
+
+<header>
+  <h1>Manage Project Proposals (CRUD)</h1>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="manageProposals.html">Proposal CRUD</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <button id="theme-toggle">Theme Toggle</button>
+
+  <section>
+    <h2>Proposal List</h2>
+    <p style="max-width:700px; text-align:left;">
+        Welcome! Here you can create or update any proposal you have.
+    <br><br>
+        If you want to delete a proposal, please provide a replacement unless there are more than 10 proposals.
+    <br><br>
+        When the total count exceeds 10, you may delete directly without providing a replacement.
+    </p>
+
+    <ol id="proposal-list"
+        style="text-align:left; list-style-position: inside;"
+        start="1">
+    </ol>
+  </section>
+
+  <section>
+    <h2>CRUD Form</h2>
+
+    <form id="crud-form">
+
+      <label>
+        Index (for update/delete):
+        <input type="number" id="index" min="1" placeholder="Index starts from 1" />
+      </label>
+      <br>
+
+      <label>
+        Proposal Text:
+        <textarea id="proposal-text" rows="10" maxlength="100" style="width:100%;"></textarea>
+    </label>
+
+    <p id="char-remaining"></p>
+      <br><br>
+
+      <button type="button" id="create-btn">Create Proposal</button>
+      <button type="button" id="update-btn">Update Proposal</button>
+      <button type="button" id="delete-btn">Delete Proposal</button>
+
+    </form>
+
+    <p id="status"></p>
+  </section>
+
+</main>
+
+<footer>
+  <p>&copy; 2025 Nicole Liu</p>
+</footer>
+
+<script src="theme.js" defer></script>
+<script src="proposalCrud.js"></script>
+
+</body>
+</html>

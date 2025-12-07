@@ -19,6 +19,7 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="aboutMe.html">About Me</a></li>
         <li><a href="resume.html">Resume</a></li>
+        <li><a href="manageProposals.html">Proposal CRUD</a></li>
       </ul>
     </nav>
   </header>
@@ -30,8 +31,13 @@
     </noscript>
 
     <h2>My Projects</h2>
+
+    <!-- hw5 -part 2-->
+    <button id="load-local">Load Local</button>
+    <button id="load-remote">Load Remote</button>
+
     <div id="project-list"></div>
-    
+
     <fieldset>
       <legend>Feedback</legend>
       <form>
@@ -46,6 +52,8 @@
     <p>&copy; 2025 Nicole Liu</p>
   </footer>
 
+  
+  <script src="localSetup.js"></script>
   <script src="theme.js" defer></script>
   <script src="projectCard.js" type="module"></script>
   <script src="renderProjects.js" type="module"></script>

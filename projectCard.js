@@ -82,9 +82,6 @@ class ProjectCard extends HTMLElement {
     `;
   }
 
-  /** Accepts a project object with keys:
-   *  title, description, img, imgSm, alt, link
-   */
   set data(project) {
     this.shadowRoot.querySelector("h2").textContent = project.title;
     this.shadowRoot.querySelector(".desc").textContent = project.description;
