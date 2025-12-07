@@ -5,7 +5,7 @@ const localData = [
     img: "images/LLM.jpg",
     imgSm: "images/LLM-small.jpg",
     alt: "Diagram showing a brain with LLM inside",
-    link: "projects.html#vision"
+    link: "projects/vision.html"
   },
   {
     title: "Local_Quantum Circuit Scheduler",
@@ -13,7 +13,7 @@ const localData = [
     img: "images/quantum.png",
     imgSm: "images/quantum-small.png",
     alt: "Visualization of a quantum circuit with multiple gates, representing Qiskit scheduling and trapped-ion compiler optimization",
-    link: "projects.html#quantum"
+    link: "projects/quantum.html"
   },
   {
     title: "Local_Escape Game – Sequence Rush",
@@ -21,7 +21,7 @@ const localData = [
     img: "images/game.png",
     imgSm: "images/game-small.png",
     alt: "Escape game interface with login and sign up options",
-    link: "projects.html#game"
+    link: "projects/game.html"
   }
 ];
 

@@ -30,7 +30,7 @@ import "./projectCard.js";
 // const container = document.querySelector("#project-list");
 
 // projects.forEach(project => {
-//   const card = document.createElement("project-card");
+//   const card = document.createElement("project-card");quantumgam
 //   card.data = project;
 //   container.appendChild(card);
 // });
