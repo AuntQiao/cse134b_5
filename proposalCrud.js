@@ -133,4 +133,32 @@ textArea.addEventListener("input", () => {
   }
 });
 
+// my project summary toggle
+const summaryBtn = document.getElementById("toggle-summary-btn");
+const summaryBox = document.getElementById("project-summary");
+
+const projectSummaries = [
+  "1. Vision-Based Liquid Extraction — Computer vision + YOLOv8 system for detecting phase boundaries in liquid-liquid extraction experiments.",
+  "2. Quantum Circuit Scheduler — A Python tool optimizing Qiskit circuits for trapped-ion architectures.",
+  "3. Sequence Rush — A math-learning mini-game built in Konva.js with an MVC architecture."
+];
+
+function renderSummary() {
+  summaryBox.innerHTML = projectSummaries
+    .map(text => `<p style="text-align:left; margin:0.5rem 0;">${text}</p>`)
+    .join("");
+}
+
+summaryBtn.addEventListener("click", () => {
+  if (summaryBox.style.display === "none") {
+    renderSummary();
+    summaryBox.style.display = "block";
+    summaryBtn.textContent = "Hide My Previous Projects";
+  } else {
+    summaryBox.style.display = "none";
+    summaryBtn.textContent = "Show My Previous Projects";
+  }
+});
+
+
 displayProposals();
